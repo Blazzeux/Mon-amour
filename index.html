@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Veux-tu être ma Valentine ?</title> 
+		<link rel="stylesheet" href="index.css" />
+
+
+	</head>
+
+	<body>
+		<div id="valentineQuestion"><b>Veux-tu être ma Valentine ?</b></div>
+		<img src="cat.gif">
+		</br>
+		<button class="answerButton" onclick="location.href='thankyou.html'">
+      	Oui
+    </button>
+    <button class="answerButton" id="noButton">Non (╥﹏╥)</button>
+	</body>
+
+	<script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+
+</html>
